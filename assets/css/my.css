@@ -1,0 +1,32 @@
+
+
+div.sponsors {
+    background-color: #949494;
+    color: #000000;
+    width: 100%;
+    margin-top: 50px;
+    float:left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+div.sponsors article {
+    /*background-color: #6e6e6e;*/
+    margin: 10px 30px;
+    max-width: 250px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+div.sponsors article a {
+    margin: 10px 30px;
+    max-width: 250px;
+    align-items: center;
+    justify-content: center;
+}
