@@ -13,7 +13,7 @@ div.sponsors {
     justify-content: center;
 }
 
-div.sponsors article {
+div.sponsors div article {
     /*background-color: #6e6e6e;*/
     margin: 10px 30px;
     max-width: 250px;
@@ -24,7 +24,24 @@ div.sponsors article {
     flex-wrap: nowrap;
 }
 
-div.sponsors article a {
+div.sponsors div.sponsors-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div.sponsors h2 {
+    letter-spacing: 5px;
+    font-size: 25px;
+    margin: 5px 10px 10px;
+}
+div.sponsors h3 {
+    letter-spacing: 3px;
+}
+div.sponsors div article a {
     margin: 10px 30px;
     max-width: 250px;
     align-items: center;
