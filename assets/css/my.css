@@ -1,7 +1,7 @@
 
 
 div.sponsors {
-    background-color: #949494;
+    background-color: #B4B4B4;
     color: #000000;
     width: 100%;
     margin-top: 50px;
@@ -38,12 +38,25 @@ div.sponsors h2 {
     font-size: 25px;
     margin: 5px 10px 10px;
 }
+
+div.sponsors div.sponsors-title {
+    margin-top: 30px;
+    text-align: center;
+}
+
 div.sponsors h3 {
     letter-spacing: 3px;
 }
+
 div.sponsors div article a {
     margin: 10px 30px;
     max-width: 250px;
     align-items: center;
     justify-content: center;
+}
+
+
+
+div.inner section {
+  margin-top: 20px;
 }
