@@ -39,21 +39,7 @@
 					</header>
 
 				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="frc.html">FRC 623</a></li>
-							<li><a href="ftc.html">FTC 226 369</a></li>
-							<li><a href="sponsors.html">Sponsors</a></li>
-						</ul>
-						<h2>Subteams</h2>
-						<ul>
-							<li><a href="business.html">Business Team</a></li>
-							<li><a href="software.html">Software Team</a></li>
-							<li><a href="build.html">Build Team</a></li>
-						</ul>
-					</nav>
+				[[menu.html.part]]
 
 				<!-- Main -->
 					<div id="main">
