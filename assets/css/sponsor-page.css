@@ -1,0 +1,37 @@
+
+
+table tbody tr td {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+table tbody tr:nth-child(2n + 1) td {
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+}
+
+table tbody tr td div {
+    min-width: 250px;
+    /*max-width: 500px;*/
+    flex-basis: 250px;
+    flex-grow: 1;
+    /*flex-basis: 250px;*/
+}
+
+table tbody tr td img {
+    flex: 0 0 250px;
+}
+
+a img:hover {
+    transform: scale(1.1);
+}
+a img {
+    transition: transform .3s;
+}
+
+a :hover {
+    color: black;
+}
