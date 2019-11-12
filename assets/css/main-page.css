@@ -1,4 +1,10 @@
 
+article a div p {
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.75);
+    padding: 10px;
+}
 
 div.sponsors {
     background-color: #B4B4B4;
