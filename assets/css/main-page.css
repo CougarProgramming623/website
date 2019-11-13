@@ -3,8 +3,19 @@ article a div p {
     color: white;
     font-size: 20px;
     background-color: rgba(0,0,0,0.75);
+    transition: background-color 2000ms;
     padding: 10px;
 }
+
+@media screen and (max-width: 736px) {
+    article a div p {
+        background-color: rgba(0,0,0,0);
+    }
+}
+
+/*.tiles article > a .content {*/
+/*    background-color: rgba(0,0,0,0.75);*/
+/*}*/
 
 div.sponsors {
     background-color: #B4B4B4;
