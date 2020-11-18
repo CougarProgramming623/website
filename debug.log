@@ -1,0 +1,7 @@
+[1012/123748.751:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\test\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\1509f641-9e34-4291-83e2-773636ec3f3a: The system cannot find the path specified. (0x3)
+[1012/123748.772:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1014/192527.158:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1015/162351.091:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1016/080902.796:ERROR:process_reader_win.cc(127)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1016/080902.797:ERROR:exception_snapshot_win.cc(100)] thread ID 1820 not found in process
+[1021/100214.850:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
