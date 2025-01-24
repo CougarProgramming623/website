@@ -139,6 +139,22 @@ input, select, textarea {
 
 		}
 
+	/* ~~~~~~~~~~~~~~~ scrollbar ~~~~~~~~~~~~~~~ */
+/* width */
+::-webkit-scrollbar {
+	width: 3px;
+	background: rgb(224, 167, 94);
+  }
+  
+  /* handle */ 
+  ::-webkit-scrollbar-thumb {
+	background: rgb(151, 49, 49);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+	background: #bfb5be; 
+  }
+
 	a {
 		-moz-transition: border-bottom-color 0.2s ease, color 0.2s ease;
 		-webkit-transition: border-bottom-color 0.2s ease, color 0.2s ease;
@@ -151,7 +167,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #f2849e !important;
+			color: rgb(255, 57, 57) !important;
 		}
 
 	strong, b {
@@ -163,7 +179,7 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0 0 2em 2em;
 	}
 
 	h1 {
@@ -2618,7 +2634,7 @@ input, select, textarea {
 					height: 100%;
 					opacity: 1.0;
 					z-index: 1;
-					opacity: 0.8;
+					opacity: 0.5;
 				}
 
 				.tiles article > .image:after {
@@ -2707,27 +2723,27 @@ input, select, textarea {
 					}
 
 			.tiles article.style1 > .image:before {
-				background-color: #f2849e;
+				background-color: rgb(151, 49, 49);
 			}
 
 			.tiles article.style2 > .image:before {
-				background-color: #7ecaf6;
+				background-color: rgb(151, 49, 49);
 			}
 
 			.tiles article.style3 > .image:before {
-				background-color: #7bd0c1;
+				background-color: rgb(151, 49, 49);
 			}
 
 			.tiles article.style4 > .image:before {
-				background-color: #c75b9b;
+				background-color: rgb(151, 49, 49);
 			}
 
 			.tiles article.style5 > .image:before {
-				background-color: #ae85ca;
+				background-color: rgb(151, 49, 49);
 			}
 
 			.tiles article.style6 > .image:before {
-				background-color: #8499e7;
+				background-color: rgb(151, 49, 49);
 			}
 
 			body:not(.is-touch) .tiles article:hover > .image {
@@ -2830,7 +2846,16 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding: 8em 0 0.1em 0 ;
+		padding: 4em 0 0.1em 0 ;
+	}
+
+	.title {
+		color: rgb(151, 49, 49);
+	}
+	.title-page-header {
+		color:rgb(151, 49, 49);
+		font-family: "Quicksand", sans-serif;
+		padding: 1em 0 0 0;
 	}
 
 		#header .logo {
@@ -2862,8 +2887,8 @@ input, select, textarea {
 
 		#header nav {
 			position: fixed;
-			right: 2em;
-			top: 2em;
+			right: 3.5em;
+			top: 3.5em;
 			z-index: 10000;
 		}
 
@@ -2892,7 +2917,7 @@ input, select, textarea {
 						height: 3em;
 						line-height: 3em;
 						padding: 0 1.5em;
-						background-color: rgba(255, 255, 255, 0.5);
+						background-color: rgb(249, 214, 137);
 						border-radius: 4px;
 						border: 0;
 						font-size: 0.8em;
@@ -2949,12 +2974,12 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#header {
-				padding: 4em 0 0.1em 0 ;
+				padding: 2em 0 0.1em 0 ;
 			}
 
 				#header nav {
-					right: 0.5em;
-					top: 0.5em;
+					right: 1em;
+					top: 1em;
 				}
 
 					#header nav ul li a[href="#menu"]:before, #header nav ul li a[href="#menu"]:after {
@@ -2989,8 +3014,8 @@ input, select, textarea {
 		max-width: 80%;
 		height: 100%;
 		-webkit-overflow-scrolling: touch;
-		background: #585858;
-		color: #ffffff;
+		background: rgb(249, 214, 137);
+		color: rgb(151, 49, 49);
 		cursor: default;
 		visibility: hidden;
 		z-index: 10002;
@@ -3152,13 +3177,13 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		padding: 0em 0 6em 0 ;
+		padding: 0em 0 0em 0;
 	}
 
 		@media screen and (max-width: 736px) {
 
 			#main {
-				padding: 0em 0 4em 0 ;
+				padding: 0em 0 0em 0 ;
 			}
 
 		}
@@ -3168,6 +3193,7 @@ input, select, textarea {
 	#footer {
 		padding: 5em 0 6em 0 ;
 		background-color: #f6f6f6;
+		margin: 45px 0px 0px 0px;
 	}
 
 		#footer > .inner {
