@@ -1,0 +1,86 @@
+/*-- Ubuntu --*/
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+  
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+  
+.ubuntu-medium {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+  
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+  
+.ubuntu-light-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+  
+.ubuntu-regular-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+  
+.ubuntu-medium-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+  
+.ubuntu-bold-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+  
+/*-- Aileron --*/
+.aileron-thin {
+  font-family: "aileron", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.aileron-light {
+  font-family: "aileron", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.aileron-regular {
+  font-family: "aileron", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.aileron-bold {
+  font-family: "aileron", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.aileron-black {
+  font-family: "aileron", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+/*-- Figtree --*/
+.figtree {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}

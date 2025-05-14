@@ -1,0 +1,911 @@
+/*-------------------------------------home pg----------------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+a:link {
+    text-decoration: none;
+    overflow-y: hidden;
+    color:#521616;
+}
+
+.img {
+    overflow-y: hidden;
+}
+
+a:visited { 
+    color: #800020; 
+    text-decoration: none;
+    overflow-y: hidden;
+}
+
+.ul {
+    overflow-y: hidden;
+}
+
+.li {
+    overflow-y: hidden;
+}
+
+/*-- header --*/
+header {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+
+.header1 {
+    position: fixed;  
+    top: 0;
+    left: 0;         
+    right: 0;        
+    width: 100%;     
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 2vw 10px 2vw;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0px 0px 0px 0px;
+}
+
+.header-logo img {
+    width: 2.75em;
+    height: 2.75em;
+    object-fit: contain;
+    padding: 5px 0px 0px 0px;
+}
+
+.header-title h4 a {
+    color: #800020;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.header-columns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 0px 0px 0px;
+}
+
+.header-columns a {
+    text-decoration: none;
+    color: #800020;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header-columns a:hover {
+    color: #d31b3a;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background: none;
+    border: none;
+    color: #800020;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    position:fixed;
+}
+
+.dropdown-content a {
+    color: #800020;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #800020;
+    margin: 3px 18px 2px 0;
+    transition: 0.4s;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-menu.active {
+    display: flex;
+    opacity: 1;
+}
+
+.mobile-menu a, 
+.mobile-menu .dropdown-button {
+    color: #800020;
+    font-size: 1em;
+    margin: 15px 0;
+    text-decoration: none;
+}
+
+.mobile-dropdown-content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 0.95em;
+}
+
+.mobile-dropdown-content.active {
+    display: flex;
+}
+
+@media screen and (max-width: 1050px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .header-columns {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        padding: 0px 27px 0px 0px;
+    }
+
+    .header-title {
+        padding: 0px 0px 0px 30px;
+    }
+
+    .header-title h4 {
+        font-size: 20px;
+    }
+
+    /*-- when hamburger == active then the nth bar animates--*/
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .mainPhoto {
+        height: 100%;
+        width: 100%;
+    }    
+}
+
+@media screen and (max-width: 500px) {
+    .header-title h4 {
+        font-size: 16px;
+    }
+
+    .bar {
+        width: 20px;
+    }
+
+    .mainPhoto {
+        height: 100%;
+        width: 100%;
+    }    
+}
+
+/*-- scrollbar --*/
+::-webkit-scrollbar {
+    width: 5px;
+    background: rgb(255, 255, 255);
+}
+  
+/* handle */ 
+::-webkit-scrollbar-thumb {
+    background: #800020;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #ab052e; 
+}
+
+/*--body--*/
+.mainPhoto {
+    height: 100%;
+    width: 100%;
+    padding: 68px 0px 0px 0px;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeInDelay {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.mainTitle {
+    position:absolute;
+    padding: 0px 0px 0px 5.5vw;
+    margin-top: -32vw;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 7vw;
+    text-shadow: 0 0 15px rgb(72, 4, 4);
+    animation-name: fadeIn;
+}
+
+.mainTitleDiv {
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+}
+
+.mainText {
+    margin-top: 10vw;
+    padding: 0px 0px 5px 8vw;
+    font-size: 4.5vw;
+    color: #800020;
+}
+
+.mainTextDiv {
+    animation-name: fadeInDelay;
+    animation-duration: 2.5s;
+}
+
+.aboutUsDescription1 {
+    padding: 3.5vw 1.5vw 5vw 10vw;
+    font-size: 1.5vw;
+    width: 49vw;
+    color:#521616;
+    text-align: justify;
+}
+
+.aboutUs1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.CompPhoto {
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+    width: 45vw;
+    margin-top: 3vw;
+}
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-2vw); }
+}
+
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-2vw); }
+}
+
+.aboutUs2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.HoratioPhoto {
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 1.5s infinite  alternate;
+    width: 45vw;
+    padding: 0 4vw 0 8vw;
+}
+
+.aboutUsDescription2 {
+    padding: 1vw 10vw 7vw 0vw;
+    font-size: 1.5vw;
+    width: 90vw;
+    color:#521616;
+    text-align: justify;
+}
+
+.aboutUs3 {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 0 10vw 5vw 10vw;
+    color:#521616;
+}
+
+.aboutUs4 {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 0 10vw 5vw 10vw;
+    color:#521616;
+}
+
+.aboutUs5 {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 0 10vw 10vw 10vw;
+    color:#521616;
+}
+
+/*-- footer --*/
+.footer {
+    background: #800020;
+    display: flex;
+    padding: 6vw 4vw 0 4vw;
+    z-index: 5;
+    position: relative;
+    bottom: 0;
+}
+
+.footerLeft {
+    padding: 0 1vw 0 0;
+    width: 70%;
+}
+
+.sponsorshipImg {
+    width: 8.5vw;
+    height: auto;
+    padding: 0 1.2vw 5vw 1.2vw;
+}
+
+.footerLeftText {
+    font-size: 1.7vw;
+    color: white;
+}
+
+.footerRight {
+    padding: 0vw 1vw 0 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.footerRightText {
+    overflow-y: hidden;
+    font-size: 1.7vw;   
+    color: white;
+}
+.footerRightText1 {
+    overflow-y: hidden;
+    font-size: 1.7vw;
+    color: white;
+    padding: 0 0 5vw 0;
+}
+
+.icons {
+    display: flex;
+    width: auto;
+    padding: 0.5vw 0.5vw 0vw 0.5vw;   
+    overflow: hidden;
+    z-index: 100;
+    position: relative;
+}
+
+.icons img {
+    object-fit: contain;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.icons li {
+    overflow: hidden;
+    height: 10vw;
+    z-index: 100;
+}
+
+.icons ul {
+    height: 10vw;
+    z-index: 100;
+    position: relative;
+    margin-block-end: 3em;
+    object-fit: contain;
+}
+
+.icons a {
+    height: 5vw;
+}
+
+.icons img:not(:hover) {
+    transform: scale(0.9);
+    transition: transform 0.2s ease;  
+}
+.icons img:hover {
+    transform: scale(1);
+    transition: transform 0.2s ease;  
+}
+
+.sponsorshipImg:not(:hover) {
+    transform: scale(0.9);
+    transition: transform 0.2s ease;  
+}
+.sponsorshipImg:hover {
+    transform: scale(1);
+    transition: transform 0.2s ease;  
+}
+
+/* back to top button */
+#myBtn {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: rgba(81, 8, 8, 0.422);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    line-height: 0px;
+  }
+  
+  #myBtn:hover {
+    background-color: #700f0f;
+  }
+  
+  #myBtn p {
+    margin: 0; 
+    font-size: 15px;
+  }
+
+/*----------------------623pg--------------------------*/
+.FRC1 {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 5vw 10vw 5vw 10vw;
+    color:#521616;
+}
+
+.FRC2 {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 0 10vw 5vw 10vw;
+    color:#521616;
+}
+
+.FRC3 {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 0 10vw 5vw 10vw;
+    color:#521616;
+}
+
+.frcGroupPhoto {
+    width: 100%;
+    padding: 0 0 0 0;
+}
+
+.FRCBotPhoto {
+    width: 25%;
+    float: right;
+}
+
+/*------------------------------226------------------------*/
+.FTC226 {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 5vw 10vw 5vw 10vw;
+    color:#521616;
+}
+
+.FTC2261 {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 0 10vw 5vw 10vw;
+    color:#521616;
+}
+
+.FTC226GroupPhoto {
+    width: 100%;
+    padding: 0 0 0 0;
+}
+
+/*-----------------------------369---------------------------*/
+.FTC369 {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 5vw 10vw 5vw 10vw;
+    color:#521616;
+}
+
+.FTC3691{
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 0 10vw 5vw 10vw;
+    color:#521616;
+}
+
+.FTC369GroupPhoto {
+    width: 100%;
+    padding: 0 0 0 0;
+}
+
+/*---------------------------business--------------------------*/
+.business1 {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 10vw 10vw 10vw 10vw;
+    color:#521616;
+}
+
+.businessGroupPhoto {
+    width: 100%;
+    padding: 25px 0 0 0;
+}
+
+/*---------------------------R&D-----------------------------*/
+.RAndD1 {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 10vw 10vw 10vw 10vw;
+    color:#521616;
+}
+
+.RAndDGroupPhoto {
+    width: 100%;
+    padding: 25px 0 0 0;
+}
+
+/*----------------------------Award History------------------*/
+.awardHistoryHeader {
+    font-size: 4vw;
+    text-align: center;
+    padding: 0 10vw 4vw 10vw;
+    color:#521616;
+}
+.awardHistory1 {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 10vw 10vw 5vw 10vw;
+    color:#521616;
+}
+
+/*-----------------------------Outreach----------------------*/
+.outreachGroupPhoto {
+    margin: auto;
+    display: block;
+    width: 65%;
+    padding: 5vw 0 5vw 0;
+}
+.outreachHeaders {
+    font-size: 4vw;
+    text-align: center;
+    padding: 15vw 10vw 0 10vw;
+    color:#521616;
+}
+.outreachText {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 0 10vw 0 10vw;
+    color:#521616;
+}
+.lastOutreachText {
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 0 10vw 10vw 10vw;
+    color:#521616;
+}
+
+/*------------------------------Sponsorships----------------------*/
+.SponsorshipInquiries {
+    font-size: 4vw;
+    text-align: center;
+    padding: 10vw 10vw 10vw 10vw;
+    color:#521616;
+}
+
+.SponsorshipInquiriesImg {
+    display: block;
+    width: 50%;
+    height: auto;
+    padding: 0 0 5vw 0;
+    margin: auto;
+    margin-top: -100px;
+}
+
+.SponsorshipInquiriesText {
+    font-size: 1.5vw;
+    text-align: center;
+    padding: 0 10vw 5vw 10vw;
+    color:#521616;
+}
+
+/*--------------------------The Current--------------------------*/
+.theCurrentHeader {
+    font-size: 4vw;
+    text-align: center;
+    padding: 9vw 10vw 0 10vw;
+    color:#521616;
+}
+
+.theCurrentImg {
+    display: block;
+    width: 50%;
+    height: auto;
+    padding: 4vw 0 5vw 0;
+    margin: auto;
+}
+
+.theCurrentText {
+    font-size: 1.5vw;
+    text-align: center;
+    padding: 0 10vw 5vw 10vw;
+    color:#521616;
+}
+
+/*--------------------------Members--------------------------*/
+.membersTitle {
+    position:absolute;
+    padding: 0px 0px 0px 10vw;
+    margin-top: -45vw;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 7vw;
+    text-shadow: 0 0 15px rgb(72, 4, 4);
+    animation-name: fadeIn;
+}
+
+.membersTitleDiv {
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+}
+
+/*-------------------------- Responsiveness --------------------------*/
+@media screen and (max-width: 430px) {
+    /*-- header --*/
+    .header-title h4 a {
+        font-size: 1em;
+    }
+    .header-logo img {
+        width: 2em;
+        height: 2em;
+    }
+    .hamburger {
+        padding: 0px 10px 0px 0px;
+    }
+    .header-title {
+        padding: 0px 0px 0px 10px;
+        gap: 10px;
+    }
+    .mainPhoto {
+        padding: 50px 0px 0px 0px;
+    }
+    .sponsorshipImg {
+        width: 10vw;
+    }
+    /*-- index --*/
+    .mainTitle {
+        font-size: 9vw;
+        padding: 0px 0px 0px 5vw;
+        margin-top: -35vw;
+    }
+    .mainText {
+        font-size: 4.5vw;
+        padding: 0px 0px 3px 3vw;
+        margin-top: 2vw;
+    }
+    .aboutUsDescription1 {
+        font-size: 2.1vw;
+        width: 70vw;
+        padding: 1vw 1vw 2vw 5vw;
+    }
+    .aboutUsDescription2 {
+        font-size: 2.1vw;
+        width: 70vw;
+        padding: 1vw 5vw 2vw 0vw;
+    }
+    .HoratioPhoto {
+        width: 50vw;
+        padding: 0 2vw 0 3vw;
+    }
+    .aboutUs3 {
+        font-size: 2.1vw;
+        padding: 0 5vw 2vw 5vw;
+    }
+    .aboutUs4 {
+        font-size: 2.1vw;
+        padding: 0 5vw 2vw 5vw;
+    }
+    .aboutUs5 {
+        font-size: 2.1vw;
+        padding: 0 5vw 5vw 5vw;
+    }
+    /*-- 623 --*/
+    .FRC1 {
+        font-size: 2.5vw;
+        padding: 5vw 5vw 5vw 5vw;
+    }
+    .FRC2 {
+        font-size: 2.5vw;
+        padding: 0 5vw 5vw 5vw;
+    }
+    .FRC3 {
+        font-size: 2.5vw;
+        padding: 0 5vw 30% 5vw;
+    }
+    .frcGroupPhoto {
+        width: 100%;
+        padding: 7.5vw 0 0 0;
+    }
+    /*-- 226 --*/
+    .FTC226 {
+        font-size: 2.5vw;
+        padding: 5vw 5vw 5vw 5vw;
+    }
+    .FTC2261 {
+        font-size: 2.5vw;
+        padding: 0 5vw 75% 5vw;
+    }
+    .FTC226GroupPhoto {
+        width: 100%;
+        padding: 13vw 0 0 0;
+    }
+    /*-- 369 --*/
+    .FTC369 {
+        font-size: 2.5vw;
+        padding: 5vw 5vw 5vw 5vw;
+    }
+    .FTC3691 {
+        font-size: 2.5vw;
+        padding: 0 5vw 80% 5vw;
+    }
+    .FTC369GroupPhoto {
+        width: 100%;
+        padding: 7.5vw 0 0 0;
+    }
+    /*-- business --*/
+    .business1 {
+        font-size: 2.5vw;
+        padding: 5vw 5vw 70% 5vw;
+    }
+    .businessGroupPhoto {
+        width: 100%;
+        padding: 13vw 0 0 0;
+    }
+    /*-- R&D --*/
+    .RAndD1 {
+        font-size: 2.5vw;
+        padding: 10vw 5vw 75% 5vw;
+    }
+    .RAndDGroupPhoto {
+        width: 100%;
+        padding: 13vw 0 0 0;
+    }
+    /*-- award history --*/
+    .awardHistoryHeader {
+        font-size: 4.5vw;
+        padding: 13vw 5vw 4vw 5vw;
+    }
+    .awardHistory1 {
+        font-size: 2.5vw;
+        padding: 10vw 5vw 5vw 5vw;
+    }
+    /*-- outreach --*/ 
+    .outreachGroupPhoto {
+        padding: 5vw 0 5vw 0;
+    }
+    .outreachHeaders {
+        font-size: 4.5vw;
+        padding: 10vw 5vw 0 5vw;
+    }
+    .outreachText {
+        font-size: 2.1vw;
+        padding: 0 5vw 0 5vw;
+    }
+    .lastOutreachText {
+        font-size: 2.1vw;
+        padding: 0 5vw 10vw 5vw;
+    }
+    .wholeThing {
+        padding: 15vw 0 0 0;
+    }
+    /*-- sponsorships --*/
+    .SponsorshipInquiries {
+        font-size: 6vw;
+        padding: 20vw 5vw 10vw 5vw;
+    }
+    .SponsorshipInquiriesImg {
+        width: 70%;
+        padding: 23vw 0 5vw 0;
+    }
+    .SponsorshipInquiriesText {
+        font-size: 2.5vw;
+        padding: 0 5vw 60% 5vw;
+    }
+    /*-- the current --*/
+    .theCurrentHeader {
+        font-size: 4.5vw;
+        padding: 22vw 5vw 0 5vw;
+    }
+    .theCurrentImg {
+        width: 70%;
+        padding: 4vw 0 5vw 0;
+    }
+    .theCurrentText {
+        font-size: 2.5vw;
+        padding: 0 5vw 38% 5vw;
+    }
+    .membersPage {
+        padding: 1vw 0 0 0;
+    }
+    /*-- footer --*/
+    .footerLeft {
+        width: 50%;
+    }
+    .footerRight {
+        width: 50%;
+        padding: 6.5vw 0vw 0 5vw;
+    }
+    .footerRightText {
+        font-size: 2.1vw;
+    }
+    .footerRightText1 {
+        font-size: 2.1vw;
+    }   
+}
