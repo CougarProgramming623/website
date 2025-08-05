@@ -196,6 +196,25 @@ header {
     display: flex;
 }
 
+.interestServer {
+    background-color:#800020;
+    padding: 5vw 5vw 5vw 5vw;
+    overflow: hidden;
+    margin: 1vw 1vw 1vw 1vw;
+}
+.interestServerText {
+    color: rgb(249, 212, 117);
+    font-size: 1.75vw;
+    text-align: center;
+    padding: 1vw 1vw 1vw 1vw;
+    vertical-align: middle;
+}
+a.interestLink {
+    color: rgb(249, 212, 117);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 1050px) {
     .header {
         padding: 15px 20px;
