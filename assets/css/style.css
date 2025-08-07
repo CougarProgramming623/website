@@ -533,6 +533,14 @@ a.interestLink {
     font-size: 15px;
   }
 
+/*----------------------Events--------------------------*/
+.calendar {
+    border: none;
+    padding: 10vw 10vw 5vw 10vw;
+    width: 100%;
+    overflow: hidden;
+}
+
 /*----------------------623pg--------------------------*/
 .FRC1 {
     font-size: 1.5vw;
@@ -927,4 +935,11 @@ a.interestLink {
     .footerRightText1 {
         font-size: 2.1vw;
     }   
+    .calendar {
+    border: none;
+    padding: 20vw 10vw 10vw 10vw;
+    width: 100%;
+    overflow: hidden;
+}
+
 }
